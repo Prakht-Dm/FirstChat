@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<button class="settings" id="settingsButton">Настройки</button>
+<button class="exit">Выйти</button>
+
+
+<div class="chat" id="chatBlock">
+    <div class="user_message"><div>Я: Добрый день! <p>18:45</p></div></div>
+    <div class="companion_message"><div>Собеседник мой: Добрый день! <p>18:45</p></div></div>
+    <div class="companion_message"><div>Собеседник мой: А это второе и, кажется, оно очень 
+        длинное, чтобы поместиться на 
+        одной строке <p>18:45</p></div></div>
+    <div class="user_message"><div>Я: Добрый день! <p>18:45</p></div></div>
+
+
+</div>
+<form class="main_form" id="sendMessage">
+    <input type="text" placeholder="сообщение..." >
+    <button>-></button>
+</form>
+</div>
+<div class="blur_block" id="blurBlock">
+    <div class="settings_block">
+        <button class="leave_settings" id="leaveSettings">+</button>
+        <div class="text">Настройки</div>
+        <div class="text">Имя в чате</div>
+        <form>
+        <input type="text" placeholder="Стив" >
+        <button>-></button>
+    </form>
+    </div>
+</div>
+
+<template id="userMessage">
+    <div class="user_message"><div>Я: Добрый день! <p>18:45</p></div></div>   
+</template>
+
+
+ <script type="module" src="main.js"></script>   
+ <script type="module" src="layout.js"></script>
+</body>
+</html>

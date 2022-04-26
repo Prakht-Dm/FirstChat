@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 1em;
+  outline: none;
+}
+
+code, kbd, samp, pre, tt, var, textarea, input, select, isindex, listing, xmp, plaintext {
+  font: inherit;
+  font-size: 1em;
+  white-space: normal;
+}
+
+dfn, i, cite, var, address, em {
+  font-style: normal;
+}
+
+th, b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+a, img, a img, iframe, form, fieldset, abbr, acronym, object, applet, table {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td, center {
+  text-align: left;
+  vertical-align: top;
+}
+
+body {
+  line-height: 1;
+  background: white;
+  color: black;
+}
+
+q {
+  quotes: "" "";
+}
+
+ul, ol, dir, menu {
+  list-style: none;
+}
+
+sub, sup {
+  vertical-align: baseline;
+}
+
+a {
+  color: inherit;
+}
+
+hr {
+  display: none;
+}
+
+/* we don't need a visual hr in layout */
+/* disables some nasty font attributes in standard browsers */
+font {
+  color: inherit !important;
+  font: inherit !important;
+  color: inherit !important;
+}
+
+marquee {
+  overflow: inherit !important;
+  -moz-binding: none;
+}
+
+blink {
+  text-decoration: none;
+}
+
+nobr {
+  white-space: normal;
+}
+
+.container {
+  width: 320px;
+  height: 533px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  margin: 50px auto;
+}
+
+.container button {
+  position: absolute;
+  height: 32px;
+  background: white;
+  border: 1px solid black;
+  padding: 0 8px;
+}
+
+.container .settings {
+  margin-left: 8px;
+  margin-top: 9px;
+}
+
+.container .exit {
+  margin-left: 246px;
+  margin-top: 9px;
+}
+
+.container .chat {
+  max-width: 304px;
+  height: 437px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  position: relative;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.container .chat div {
+  padding: 4px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .chat div div {
+  background: #E5E5E5;
+  display: inline-block;
+}
+
+.container .chat div div p {
+  text-align: right;
+}
+
+.container .chat .user_message {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container .chat div:last-of-type {
+  margin-bottom: 4px;
+}
+
+.container form {
+  height: 32px;
+  position: absolute;
+  margin-top: 494px;
+}
+
+.container form input:first-of-type {
+  width: 257px;
+  height: 30px;
+  margin-left: 8px;
+  padding-left: 7px;
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.container form button {
+  width: 29px;
+  height: 32px;
+  margin-left: 8px;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.blur_block {
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.801);
+  display: none;
+}
+
+.blur_block .settings_block {
+  width: 273px;
+  height: 319px;
+  border: 1px solid black;
+  background-color: white;
+  position: relative;
+  margin: 158px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blur_block .settings_block .leave_settings {
+  position: absolute;
+  top: 13px;
+  left: 241px;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.blur_block .settings_block div:first-of-type {
+  margin-top: 16px;
+}
+
+.blur_block .settings_block .text {
+  margin: 8px 14px;
+}
+
+.blur_block .settings_block form input:first-of-type {
+  width: 207px;
+  height: 30px;
+  margin-left: 14px;
+  padding-left: 7px;
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.blur_block .settings_block form button {
+  width: 29px;
+  height: 32px;
+  margin-left: 4px;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
