@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cookies": "^0.8.0",
+    "date-fns": "^2.28.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}

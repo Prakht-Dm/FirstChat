@@ -110,8 +110,9 @@ nobr {
 }
 
 .container .chat {
-  max-width: 304px;
+  width: 304px;
   height: 437px;
+  min-height: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,12 +120,11 @@ nobr {
   position: relative;
   margin: auto;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -134,8 +134,13 @@ nobr {
   overflow-y: auto;
 }
 
+.container .chat::-webkit-scrollbar {
+  width: 0;
+}
+
 .container .chat div {
   padding: 4px 8px;
+  border-radius: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,10 +199,10 @@ nobr {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.801);
-  display: none;
+  display: block;
 }
 
-.blur_block .settings_block {
+.blur_block .settings_block, .blur_block .loggin_page {
   width: 273px;
   height: 319px;
   border: 1px solid black;
@@ -211,9 +216,10 @@ nobr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: none;
 }
 
-.blur_block .settings_block .leave_settings {
+.blur_block .settings_block .leave_settings, .blur_block .loggin_page .leave_settings {
   position: absolute;
   top: 13px;
   left: 241px;
@@ -231,15 +237,15 @@ nobr {
   text-align: left;
 }
 
-.blur_block .settings_block div:first-of-type {
+.blur_block .settings_block div:first-of-type, .blur_block .loggin_page div:first-of-type {
   margin-top: 16px;
 }
 
-.blur_block .settings_block .text {
+.blur_block .settings_block .text, .blur_block .loggin_page .text {
   margin: 8px 14px;
 }
 
-.blur_block .settings_block form input:first-of-type {
+.blur_block .settings_block form input:first-of-type, .blur_block .loggin_page form input:first-of-type {
   width: 207px;
   height: 30px;
   margin-left: 14px;
@@ -248,10 +254,137 @@ nobr {
   border: 1px solid black;
 }
 
-.blur_block .settings_block form button {
+.blur_block .settings_block form button, .blur_block .loggin_page form button {
   width: 29px;
   height: 32px;
   margin-left: 4px;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.blur_block .loggin_page {
+  width: 273px;
+  height: 319px;
+  border: 1px solid black;
+  background-color: white;
+  position: relative;
+  margin: 158px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blur_block .loggin_page .leave_settings {
+  position: absolute;
+  top: 13px;
+  left: 241px;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.blur_block .loggin_page div:first-of-type {
+  margin-bottom: 110px;
+}
+
+.blur_block .loggin_page .text {
+  margin: 8px 14px;
+}
+
+.blur_block .loggin_page form input:first-of-type {
+  width: 207px;
+  height: 30px;
+  margin-left: 14px;
+  padding-left: 7px;
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.blur_block .loggin_page form button {
+  width: 120px;
+  height: 32px;
+  margin: 7px 14px;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.blur_block .code_page {
+  width: 273px;
+  height: 319px;
+  border: 1px solid black;
+  background-color: white;
+  position: relative;
+  margin: 158px auto;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blur_block .code_page .leave_settings {
+  position: absolute;
+  top: 13px;
+  left: 241px;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.blur_block .code_page div:first-of-type {
+  margin-top: 16px;
+  margin-bottom: 110px;
+}
+
+.blur_block .code_page .text {
+  margin: 8px 14px;
+}
+
+.blur_block .code_page form input:first-of-type {
+  width: 207px;
+  height: 30px;
+  margin-left: 14px;
+  padding-left: 7px;
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.blur_block .code_page form button {
+  width: 62px;
+  height: 32px;
+  margin: 7px 14px;
   white-space: nowrap;
   font-family: Roboto;
   font-size: 16px;

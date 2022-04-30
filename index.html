@@ -14,13 +14,6 @@
 
 
 <div class="chat" id="chatBlock">
-    <div class="user_message"><div>Я: Добрый день! <p>18:45</p></div></div>
-    <div class="companion_message"><div>Собеседник мой: Добрый день! <p>18:45</p></div></div>
-    <div class="companion_message"><div>Собеседник мой: А это второе и, кажется, оно очень 
-        длинное, чтобы поместиться на 
-        одной строке <p>18:45</p></div></div>
-    <div class="user_message"><div>Я: Добрый день! <p>18:45</p></div></div>
-
 
 </div>
 <form class="main_form" id="sendMessage">
@@ -29,7 +22,7 @@
 </form>
 </div>
 <div class="blur_block" id="blurBlock">
-    <div class="settings_block">
+    <div class="settings_block" id='settingsBlock'>
         <button class="leave_settings" id="leaveSettings">+</button>
         <div class="text">Настройки</div>
         <div class="text">Имя в чате</div>
@@ -38,10 +31,30 @@
         <button>-></button>
     </form>
     </div>
+    <div class="loggin_page" id="logginPage">
+        <button class="leave_settings" id="leaveLoggin">+</button>
+        <div class="text">Авторизация</div>
+        <div class="text">Почта</div>
+        <form id='emailForm'> 
+            <input type="email" id='inputEmail'>
+            <button>Получить код</button>
+        </form>
+    </div>
+    <div class="code_page" id="codePage">
+        <button class="leave_settings" id="leaveCode">+</button>
+        <div class="text">Подтверждение</div>
+        <div class="text">Код</div>
+        <form>
+        <input type="text" placeholder="">
+        <button>Войти</button>
+    </form>
+    </div>
+
+
 </div>
 
 <template id="userMessage">
-    <div class="user_message"><div>Я: Добрый день! <p>18:45</p></div></div>   
+    <div class="user_message">ERROR!</div>   
 </template>
 
 
